@@ -5,6 +5,9 @@ html{
     overflow-x: hidden;
 }
 
+
+$servicesBackground:  linear-gradient(to right, #404040 0%,#404040 50%,#2d5f3b 50%,#2d5f3b 100% );
+
 body{
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
@@ -27,7 +30,11 @@ body{
         font-size: 16px;
         padding-bottom: 30px;
     }
-    &__btn{
+
+
+}
+
+.button{
         width: 150px;
         height: 45px;
         border: 2px solid #fff;
@@ -41,12 +48,11 @@ body{
         }
     }
 
-}
-
 .navbar{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 60%;
+    z-index: 11;
 }
 
 .nav-link{
@@ -97,7 +103,7 @@ body{
     }
 
 .services{
-    background: linear-gradient(to right, #404040 0%,#404040 50%,#2d5f3b 50%,#2d5f3b 100% );
+    background: $servicesBackground;
     &__block{
         display: flex;
         flex-direction: column;
@@ -200,8 +206,12 @@ body{
     height: 40vh;
 }
     .navbar{
-    width: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
 }
+
 .music{
     height: 40vh;
 }
@@ -211,9 +221,7 @@ body{
     .header{
     height: 40vh;
 }
-    .navbar{
-    width: 100%;
-}
+
     .collapse {
         justify-content: space-around !important;
     }

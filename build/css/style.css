@@ -27,7 +27,8 @@ body {
   font-size: 16px;
   padding-bottom: 30px;
 }
-.header__btn {
+
+.button {
   width: 150px;
   height: 45px;
   border: 2px solid #fff;
@@ -36,15 +37,16 @@ body {
   color: #fff;
   transition: 0.6s ease-in;
 }
-.header__btn:hover {
+.button:hover {
   background-color: #fff;
   color: #f74c55;
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 60%;
+  z-index: 11;
 }
 
 .nav-link {
@@ -194,7 +196,10 @@ body {
   }
 
   .navbar {
-    width: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
   }
 
   .music {
@@ -204,10 +209,6 @@ body {
 @media (max-width: 768px) {
   .header {
     height: 40vh;
-  }
-
-  .navbar {
-    width: 100%;
   }
 
   .collapse {
